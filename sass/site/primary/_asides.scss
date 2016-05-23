@@ -1,0 +1,19 @@
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+.latest-news{
+	.widget-area{
+		h2{
+			margin-top: 0;
+		}
+
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+}

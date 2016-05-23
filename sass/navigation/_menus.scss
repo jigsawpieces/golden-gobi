@@ -1,0 +1,229 @@
+.main-navigation {
+	/*clear: both;*/
+	display: block;
+	/*float: left;*/
+	/*width: 100%;*/
+	text-align: right;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		text-align: right;
+
+		li:hover{
+			a{
+				border-bottom: 2px solid $color__link;
+			}
+		}
+
+		ul {
+			float: left;
+			position: absolute;
+			top: 20px;
+			padding-top: 10px;
+			left: -999em;
+			z-index: 99999;
+			min-width: 150px;
+			text-align: left;
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				padding: 0;
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: auto;
+				text-align: left;
+				&:hover{
+					color: $color__link;
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+
+			&.sub-menu{
+				li a{
+					border-bottom-color: transparent;
+				}
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+
+		&#social-media{
+			display: inline-block;
+			margin-top: 15px;
+			li {
+				margin: 0 0 0 5px;
+				a{
+					padding: 0;
+					background-color: transparent;
+					color: #fff;
+					height: 28px;
+					border-bottom: 0;
+					i{
+						font-size: 28px;
+					}
+
+					&:hover{
+						color: $color__link;
+					}
+				}
+			}
+		}
+	}
+	
+	li {
+		float: none;
+		position: relative;
+		padding: 0 5px;
+		display: inline-block;
+		margin-bottom: 0;
+
+		&:hover > a,
+		&.focus > a {
+		}
+
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+	
+	a {
+		display: block;
+		text-decoration: none;
+		background-color: transparent;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		padding: 0;
+		letter-spacing: 1px;
+		transition: all 300ms ease-out;
+		line-height: 1.5;
+		border-bottom: 2px solid transparent;
+
+		&[href*="hostelworld"]{
+			border-bottom: 2px solid $color__link;
+			&:hover{
+				//background-color: #fff;
+				color: $color__link;
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+
+	h3, .menu-social-media-container{
+		display: inline-block;
+		line-height: 1;
+	}
+
+	h3{
+		font-size: 16px;
+		font-size: 1.2rem;
+		font-family: $font__main;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin: 0;
+		color: #fff;
+		letter-spacing: 1px;
+	}
+
+	@media screen and (max-width: 640px){
+		text-align: left;
+	}
+}
+
+
+
+/* Small menu. */
+.menu-toggle{
+	display: block;
+	float: right;
+	margin-top: 10px;
+}
+
+.main-navigation.toggled ul#primary-menu{
+	display: block;
+	position: absolute;
+	width: 100%;
+	background-color: #666;
+	margin-top: 50px;
+	left: 0;
+	z-index: 1;
+	max-height: 400px;
+	overflow-y: scroll;
+	li{
+		width: 100%;
+		text-align: center;
+		a{
+			padding: 10px;
+			border-bottom: 0;
+		}
+	}
+
+	ul.sub-menu{
+		display: block;
+		position: initial;
+		width: 100%;
+		padding-top: 0;
+		border-top: 2px solid rgba(#000,0.1);
+		border-bottom: 2px solid rgba(#000,0.1);
+
+		li a{
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

@@ -1,0 +1,163 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+header.site-header{
+	padding: 25px 0 0 0;
+	line-height: 1;
+	//background-color: $color__link-hover;
+}
+
+footer{
+	&.site-footer{
+		background-color: #111;
+		padding: 60px 0 80px 0;
+		margin-top: 80px;
+
+		@media screen and (max-width: 768px){
+			padding: 20px 0;
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+
+	p{
+		color: #fff;
+
+		a{
+			text-decoration: none;
+		}
+	}
+	
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			margin-bottom: 10px;
+			a{
+				color: #fff;
+				text-decoration: none;
+				&:hover{
+					color: $color__orange;
+					text-decoration: none;
+				}
+				&:visited{
+					color: #fff;
+					&:hover{
+						color: $color__orange;
+					}
+				}
+			}
+		}
+	}
+
+	.logos{
+
+		text-align: center;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid rgba(#fff,0.3);
+		h2{
+			color: #fff;
+			text-align: center;
+			margin: 0;
+			font-family: $font__main;
+			font-weight: 400;
+			font-size: 18px;
+			font-size: 1.6rem;
+		}
+
+		img{
+			height: 40px;
+			width: auto;
+			margin: 20px 20px 0 20px;
+		}
+
+		@media screen and (max-width: 768px){
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.carousel{
+	margin: 30px auto 40px auto;
+}
+
+.carousel-image{
+	background-size: cover;
+	background-position: center center;
+	height: 450px;
+}
+
+.carousel-buttons {
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-bottom: auto;
+	width: 100px;
+	height: 100px;
+	margin-top: auto;
+	outline: none;
+	text-align: center;
+	opacity: 0.3;
+	&.right{
+		right: 0;
+	}
+
+	&.left{
+		left: 0;
+	}
+
+	i{
+		font-size: 100px;
+	}
+	&:hover{
+		color: #fff;
+	}
+}
+
+.carousel:hover{
+	.carousel-buttons{
+		opacity: 1;
+		color: #fff;
+	}
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+@import "tables";

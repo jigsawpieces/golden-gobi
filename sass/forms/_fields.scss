@@ -1,0 +1,64 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 0;
+	border-radius: 0;
+	font-weight: 400;
+	line-height: 1;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	background: #fff;
+	color: #222;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	padding: 5px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+
+.field-wrap{
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+	.ninja-forms-form-wrap .ninja-forms-form select{
+		width: 100%;
+	}
+}
